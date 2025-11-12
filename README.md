@@ -20,14 +20,6 @@ We trained DQN and DDQN agents on four classical control environments: CartPole-
 | MountainCar-v0 | -105.08 ± 11.73  | -116.01 ± 21.52  | DQN    |
 | Pendulum-v1    | -179.50 ± 224.76 | -166.47 ± 92.28  | DDQN   |
 
-**[Insert W&B Chart: CartPole-v1 comparison]**
-
-**[Insert W&B Chart: Acrobot-v1 comparison]**
-
-**[Insert W&B Chart: MountainCar-v0 comparison]**
-
-**[Insert W&B Chart: Pendulum-v1 comparison]**
-
 **Key Findings:**
 
 The most important discovery was that certain hyperparameters are critical for training success:
@@ -101,15 +93,11 @@ Yes, the agents performed well on 3 out of 4 environments.
 - Result: 500.00 ± 0.00 (perfect score on all 100 test episodes)
 - This is the maximum possible reward. The agent learned to balance the pole indefinitely.
 
-**[Insert W&B Chart showing CartPole performance]**
-
 **Acrobot-v1 (DDQN): Near-Optimal**
 
 - Result: -85.42 ± 13.96 steps
 - The physical optimum is around 70-80 steps, so we're very close.
 - The agent efficiently builds momentum to reach the goal height.
-
-**[Insert W&B Chart showing Acrobot performance]**
 
 **MountainCar-v0 (DQN): Good**
 
@@ -118,16 +106,12 @@ Yes, the agents performed well on 3 out of 4 environments.
 - The agent learned the momentum-building strategy.
 - Note: Required 500 episodes before first discovering the goal.
 
-**[Insert W&B Chart showing MountainCar performance]**
-
 **Pendulum-v1 (DDQN): Moderate**
 
 - Result: -166.47 ± 92.28
 - High variance is a problem. Best episodes reached -0.76 (nearly perfect), but typical performance is inconsistent.
 - The issue is discretization: we split continuous actions into 25 bins, losing the fine control needed for precise balance.
 - Continuous control algorithms (DDPG, TD3) typically achieve -50 to -100.
-
-**[Insert W&B Chart showing Pendulum performance]**
 
 **Overall Assessment:**
 
